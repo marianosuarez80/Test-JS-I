@@ -155,9 +155,11 @@ function esPositivo(numero) {
   //Si el número es 0, devuelve false
   if(numero > 0){
     return "Es positivo";
-  } else {
+  } else if (numero < 0) {
     return "Es negativo";
-  }
+  } else if(numero === 0){
+    return false;
+  } 
 }
 
 function agregarSimboloExclamacion(str) {
@@ -195,16 +197,19 @@ function deEuroAdolar(euro) {
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
+  return alto * ancho;
 }
 
 function retornarPerimetro(lado) {
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
+  return lado * 4;
 }
 
 function areaDelTriangulo(base, altura) {
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
+  return base * altura / 2;
 }
 
 function esVocal(letra) {
@@ -212,6 +217,38 @@ function esVocal(letra) {
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
+  if (letra.length > 1) {
+    return "Dato incorrecto";
+  } 
+  switch(letra){
+    case "a":
+    return "Es vocal";
+    break;
+    case "e":
+    return "Es vocal";
+    break;
+    case "i":
+    return "Es vocal";
+    break;
+    case "o":
+    return "Es vocal";
+    case "u":
+    return "Es vocal";
+    case "A":
+    return "Es vocal";
+    case "E":
+    return "Es vocal";
+    case "I":
+    return "Es vocal";
+    case "O":
+    return "Es vocal";
+    case "U":
+    return "Es vocal";
+    break;
+    default:
+    return "No es vocal";
+    break;
+    }
 }
 
 // --------------------------------
